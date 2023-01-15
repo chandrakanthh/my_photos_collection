@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="userProfile"
+            type="com.example.mysampletask.data.models.GetDetails" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".ui.userProfile.UserProfileFragment">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_margin="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/user_profile_image_iv"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/user_name_tv"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_name_header_tv"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile_image_iv"
+        android:layout_margin="10dp"
+        android:text="@string/username_str"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/user_name_header_tv"
+        android:text="@{userProfile.user.name??userProfile.user.username}"
+        android:gravity="center"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_location_header_tv"
+        app:layout_constraintTop_toBottomOf="@+id/user_name_tv"
+        android:layout_margin="10dp"
+        android:text="@string/location_str"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_location_tv"
+        app:layout_constraintTop_toBottomOf="@+id/user_location_header_tv"
+        android:text="@{userProfile.user.location}"
+        android:gravity="center"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_bio_header_tv"
+        app:layout_constraintTop_toBottomOf="@+id/user_location_tv"
+        android:layout_margin="10dp"
+        android:text="@string/bio_str"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_bio_tv"
+        app:layout_constraintTop_toBottomOf="@+id/user_bio_header_tv"
+        android:text="@{userProfile.user.bio}"
+        android:gravity="center"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

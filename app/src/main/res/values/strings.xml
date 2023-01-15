@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Sample Task</string>
+    <string name="collections">collections</string>
+    <string name="photos_str">PHOTOS</string>
+    <string name="profile_str">PROFILE</string>
+    <string name="username_str">Name</string>
+    <string name="location_str">Location</string>
+    <string name="bio_str">Bio</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
